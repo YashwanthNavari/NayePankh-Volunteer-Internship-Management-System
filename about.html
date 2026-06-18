@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - NayePankh Foundation</title>
+  <!-- Google Fonts Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Darkmode detection script to prevent FOUC -->
+  <script src="js/darkmode.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-container">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
+        </a>
+      </div>
+      
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="volunteer.html" class="nav-link">Volunteer</a>
+        <a href="internship.html" class="nav-link">Internships</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="recommendation.html" class="nav-link">Recommendation</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="btn-theme-toggle" id="theme-toggle">
+          <span id="theme-toggle-icon">🌙</span> <span id="theme-toggle-text">Dark Mode</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Header Section -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <h1>Who We <span>Are</span></h1>
+      <p>NayePankh Foundation is dedicated to transforming lives through grassroots educational initiatives, skill development courses, and social empowerment projects.</p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="container slide-up">
+    <div class="about-sections">
+      
+      <!-- Mission Row -->
+      <div class="about-row">
+        <div class="about-text">
+          <h3>Our Mission</h3>
+          <p>Empowering youth through education and social impact initiatives. We aim to break the cycle of poverty by providing primary academic assistance, career counseling, and technological literacy to students who need it the most.</p>
+          <p>Through our dedicated volunteer networks, we build resources that enable rural communities to develop sustainable solutions for local challenges.</p>
+        </div>
+        <div style="background: linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(30,64,175,0.2) 100%); border-radius: 24px; padding: 4rem 2rem; display: flex; justify-content: center; align-items: center; border: 1px dashed var(--primary);">
+          <i class="fa-solid fa-bullseye" style="font-size: 8rem; color: var(--primary);"></i>
+        </div>
+      </div>
+
+      <!-- Vision Row -->
+      <div class="about-row" style="direction: rtl;">
+        <!-- Text container goes left visually in light modes, but we override typography direction below -->
+        <div class="about-text" style="direction: ltr; text-align: left;">
+          <h3>Our Vision</h3>
+          <p>Creating a society where every individual has equal opportunities to learn, grow, and thrive. We visualize a future where zip codes or socioeconomic backgrounds do not dictate a child's academic or career success.</p>
+          <p>We work to foster communities where mutual support, empathy, and collective growth form the foundation of day-to-day interactions.</p>
+        </div>
+        <div style="background: linear-gradient(135deg, rgba(245,158,11,0.1) 0%, rgba(245,158,11,0.2) 100%); border-radius: 24px; padding: 4rem 2rem; display: flex; justify-content: center; align-items: center; border: 1px dashed var(--accent);">
+          <i class="fa-solid fa-eye" style="font-size: 8rem; color: var(--accent);"></i>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Impact Metrics Section -->
+  <section class="container slide-up" style="background-color: var(--surface); border-radius: 24px; border: 1px solid var(--border-color); padding: 4rem 2rem;">
+    <h2 class="section-title">Our Impact in Numbers</h2>
+    <div class="stats-grid">
+      <div class="stats-card hover-scale">
+        <i class="fa-solid fa-user-graduate" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+        <h3>5,000+</h3>
+        <p>Students Supported</p>
+      </div>
+      <div class="stats-card hover-scale">
+        <i class="fa-solid fa-users" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+        <h3>2,500+</h3>
+        <p>Volunteers Engaged</p>
+      </div>
+      <div class="stats-card hover-scale">
+        <i class="fa-solid fa-circle-check" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+        <h3>150+</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stats-card hover-scale">
+        <i class="fa-solid fa-school" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+        <h3>20+</h3>
+        <p>Adopted Schools</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="container slide-up">
+    <h2 class="section-title">Our Core Values</h2>
+    <div class="programs-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="program-card hover-scale">
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h4>Transparency</h4>
+        <p>We ensure that all resources and donations are directed fully to impact programs, maintaining clear reports for our partners.</p>
+      </div>
+      <div class="program-card hover-scale">
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-face-smile-beam"></i>
+        </div>
+        <h4>Empathy</h4>
+        <p>Putting ourselves in the shoes of the communities we support to build practical solutions that match their true desires.</p>
+      </div>
+      <div class="program-card hover-scale">
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-fire"></i>
+        </div>
+        <h4>Dedication</h4>
+        <p>Our volunteer force is highly committed to bringing consistency and passion to our programs weekend after weekend.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-container">
+    <div class="footer">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
+          <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
+        </a>
+        <p>NayePankh Foundation is a non-profit organization focused on uplifting rural and underserved areas through education, women empowerment, and sustainable community programs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="internship.html">Internships</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More Links</h4>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="recommendation.html">Recommendation System</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p style="margin-bottom: 0.5rem;"><i class="fa-solid fa-location-dot" style="color: var(--primary); margin-right: 0.5rem;"></i> Sector 62, Noida, UP, India</p>
+        <p style="margin-bottom: 0.5rem;"><i class="fa-solid fa-phone" style="color: var(--primary); margin-right: 0.5rem;"></i> +91 98765 43210</p>
+        <p style="margin-bottom: 1rem;"><i class="fa-solid fa-envelope" style="color: var(--primary); margin-right: 0.5rem;"></i> info@nayepankh.org</p>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NayePankh Foundation. All rights reserved.</p>
+      <p>Made with <i class="fa-solid fa-heart" style="color: red;"></i> for a better society</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Registration - NayePankh Foundation</title>
+  <!-- Google Fonts Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Darkmode detection script to prevent FOUC -->
+  <script src="js/darkmode.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-container">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
+        </a>
+      </div>
+      
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="volunteer.html" class="nav-link active">Volunteer</a>
+        <a href="internship.html" class="nav-link">Internships</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="recommendation.html" class="nav-link">Recommendation</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="btn-theme-toggle" id="theme-toggle">
+          <span id="theme-toggle-icon">🌙</span> <span id="theme-toggle-text">Dark Mode</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Container -->
+  <main class="container fade-in">
+    <div class="form-container">
+      <div class="form-title">
+        <i class="fa-solid fa-handshake-angle" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+        <h2>Join as a Volunteer</h2>
+        <p style="color: var(--text-secondary); margin-top: 0.5rem;">Fill in your details below to become a part of the NayePankh team.</p>
+      </div>
+
+      <form id="volunteer-form" novalidate>
+        
+        <!-- Name -->
+        <div class="form-group">
+          <label for="vol-name"><i class="fa-solid fa-user" style="margin-right: 0.5rem; color: var(--primary);"></i> Full Name</label>
+          <input type="text" id="vol-name" class="form-control" placeholder="Enter your full name" required minlength="3">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="vol-email"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem; color: var(--primary);"></i> Email Address</label>
+          <input type="email" id="vol-email" class="form-control" placeholder="Enter your email address" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <label for="vol-phone"><i class="fa-solid fa-phone" style="margin-right: 0.5rem; color: var(--primary);"></i> Phone Number</label>
+          <input type="tel" id="vol-phone" class="form-control" placeholder="Enter 10-digit phone number" required pattern="[0-9]{10}">
+        </div>
+
+        <!-- College -->
+        <div class="form-group">
+          <label for="vol-college"><i class="fa-solid fa-building-columns" style="margin-right: 0.5rem; color: var(--primary);"></i> College / Organization</label>
+          <input type="text" id="vol-college" class="form-control" placeholder="Enter college/university name" required>
+        </div>
+
+        <!-- Skills Dropdown / Text Input (We'll use a tag-style input or plain multi-select text for simplicity) -->
+        <div class="form-group">
+          <label for="vol-skills"><i class="fa-solid fa-screwdriver-wrench" style="margin-right: 0.5rem; color: var(--primary);"></i> Key Skills</label>
+          <select id="vol-skills" class="form-control" required>
+            <option value="" disabled selected>Select your primary skill</option>
+            <option value="Python">Python Programming</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Teaching">Teaching & Tutoring</option>
+            <option value="Design">Graphic & UI/UX Design</option>
+            <option value="Communication">Communication & PR</option>
+          </select>
+        </div>
+
+        <!-- Interests Dropdown -->
+        <div class="form-group">
+          <label for="vol-interests"><i class="fa-solid fa-heart" style="margin-right: 0.5rem; color: var(--primary);"></i> Domain of Interest</label>
+          <select id="vol-interests" class="form-control" required>
+            <option value="" disabled selected>Select domain of interest</option>
+            <option value="Education">Education Support</option>
+            <option value="Technology">Technology Development</option>
+            <option value="Marketing">Marketing & Outreach</option>
+            <option value="Environment">Environmental Campaigns</option>
+          </select>
+        </div>
+
+        <!-- Experience -->
+        <div class="form-group">
+          <label for="vol-experience"><i class="fa-solid fa-star-half-stroke" style="margin-right: 0.5rem; color: var(--primary);"></i> Prior Experience (Optional)</label>
+          <textarea id="vol-experience" class="form-control" placeholder="Briefly describe any previous volunteering or leadership experience..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          <i class="fa-solid fa-circle-check"></i> Register
+        </button>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer-container">
+    <div class="footer">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom: 1.5rem; display: inline-flex;">
+          <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
+        </a>
+        <p>NayePankh Foundation is a non-profit organization focused on uplifting rural and underserved areas through education, women empowerment, and sustainable community programs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="internship.html">Internships</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More Links</h4>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="recommendation.html">Recommendation System</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p style="margin-bottom: 0.5rem;"><i class="fa-solid fa-location-dot" style="color: var(--primary); margin-right: 0.5rem;"></i> Sector 62, Noida, UP, India</p>
+        <p style="margin-bottom: 0.5rem;"><i class="fa-solid fa-phone" style="color: var(--primary); margin-right: 0.5rem;"></i> +91 98765 43210</p>
+        <p style="margin-bottom: 1rem;"><i class="fa-solid fa-envelope" style="color: var(--primary); margin-right: 0.5rem;"></i> info@nayepankh.org</p>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NayePankh Foundation. All rights reserved.</p>
+      <p>Made with <i class="fa-solid fa-heart" style="color: red;"></i> for a better society</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
