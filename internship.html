@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apply for Internship - NayePankh Foundation</title>
+  <meta name="description" content="Apply for an internship at NayePankh Foundation. Choose from roles in Full Stack, Front End, Python, Machine Learning, UI/UX and more.">
   <!-- Google Fonts Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- FontAwesome for Icons -->
@@ -37,6 +38,8 @@
         <a href="internship.html" class="nav-link active">Internships</a>
         <a href="dashboard.html" class="nav-link">Dashboard</a>
         <a href="recommendation.html" class="nav-link">Recommendation</a>
+        <a href="tracker.html" class="nav-link">Track Application</a>
+        <a href="certificate.html" class="nav-link">Certificate</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <button class="btn-theme-toggle" id="theme-toggle">
           <span id="theme-toggle-icon">🌙</span> <span id="theme-toggle-text">Dark Mode</span>
@@ -47,60 +50,216 @@
 
   <!-- Container -->
   <main class="container fade-in">
+
+    <!-- Page Header -->
+    <div style="text-align:center; margin-bottom:3rem;">
+      <h2 class="section-title">Apply for an Internship</h2>
+      <p style="color:var(--text-secondary); margin-top:-1.5rem;">Join our remote internship program — gain real experience while driving social change.</p>
+    </div>
+
+    <!-- Step 1 of role showcase: Role Cards -->
+    <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:1.25rem; color:var(--text-secondary);">
+      <i class="fa-solid fa-hand-pointer" style="color:var(--primary);margin-right:0.5rem;"></i>Choose a Role — Click to Select
+    </h3>
+    <div class="roles-showcase">
+
+      <div class="role-card" data-role="Full Stack" id="role-card-fullstack">
+        <div class="selected-badge"><i class="fa-solid fa-check"></i></div>
+        <div class="role-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h4>Full Stack Developer</h4>
+        <p style="font-size:0.83rem;color:var(--text-secondary);">Build end-to-end web applications using modern frameworks and APIs.</p>
+        <div class="role-meta">
+          <span><i class="fa-solid fa-clock"></i> 3 Months</span>
+          <span><i class="fa-solid fa-wifi"></i> Remote</span>
+        </div>
+        <div class="role-tags">
+          <span class="role-tag">Node.js</span>
+          <span class="role-tag">React</span>
+          <span class="role-tag">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="role-card" data-role="Front End" id="role-card-frontend">
+        <div class="selected-badge"><i class="fa-solid fa-check"></i></div>
+        <div class="role-icon"><i class="fa-solid fa-palette"></i></div>
+        <h4>Front End Developer</h4>
+        <p style="font-size:0.83rem;color:var(--text-secondary);">Create pixel-perfect, responsive, and accessible web interfaces.</p>
+        <div class="role-meta">
+          <span><i class="fa-solid fa-clock"></i> 2 Months</span>
+          <span><i class="fa-solid fa-wifi"></i> Remote</span>
+        </div>
+        <div class="role-tags">
+          <span class="role-tag">HTML/CSS</span>
+          <span class="role-tag">JavaScript</span>
+          <span class="role-tag">Figma</span>
+        </div>
+      </div>
+
+      <div class="role-card" data-role="Web Development" id="role-card-webdev">
+        <div class="selected-badge"><i class="fa-solid fa-check"></i></div>
+        <div class="role-icon"><i class="fa-solid fa-code"></i></div>
+        <h4>Web Development Intern</h4>
+        <p style="font-size:0.83rem;color:var(--text-secondary);">Work on feature development and maintenance of the volunteer portal.</p>
+        <div class="role-meta">
+          <span><i class="fa-solid fa-clock"></i> 2 Months</span>
+          <span><i class="fa-solid fa-wifi"></i> Remote</span>
+        </div>
+        <div class="role-tags">
+          <span class="role-tag">HTML</span>
+          <span class="role-tag">CSS</span>
+          <span class="role-tag">JS</span>
+        </div>
+      </div>
+
+      <div class="role-card" data-role="Python" id="role-card-python">
+        <div class="selected-badge"><i class="fa-solid fa-check"></i></div>
+        <div class="role-icon"><i class="fa-brands fa-python"></i></div>
+        <h4>Python Developer</h4>
+        <p style="font-size:0.83rem;color:var(--text-secondary);">Automate workflows, build scripts, and develop backend services.</p>
+        <div class="role-meta">
+          <span><i class="fa-solid fa-clock"></i> 3 Months</span>
+          <span><i class="fa-solid fa-wifi"></i> Remote</span>
+        </div>
+        <div class="role-tags">
+          <span class="role-tag">Python</span>
+          <span class="role-tag">Flask</span>
+          <span class="role-tag">Pandas</span>
+        </div>
+      </div>
+
+      <div class="role-card" data-role="Machine Learning" id="role-card-ml">
+        <div class="selected-badge"><i class="fa-solid fa-check"></i></div>
+        <div class="role-icon"><i class="fa-solid fa-brain"></i></div>
+        <h4>Machine Learning Intern</h4>
+        <p style="font-size:0.83rem;color:var(--text-secondary);">Build predictive models for volunteer matching and impact analytics.</p>
+        <div class="role-meta">
+          <span><i class="fa-solid fa-clock"></i> 4 Months</span>
+          <span><i class="fa-solid fa-wifi"></i> Remote</span>
+        </div>
+        <div class="role-tags">
+          <span class="role-tag">scikit-learn</span>
+          <span class="role-tag">NumPy</span>
+          <span class="role-tag">TensorFlow</span>
+        </div>
+      </div>
+
+      <div class="role-card" data-role="UI UX" id="role-card-uiux">
+        <div class="selected-badge"><i class="fa-solid fa-check"></i></div>
+        <div class="role-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+        <h4>UI/UX Designer</h4>
+        <p style="font-size:0.83rem;color:var(--text-secondary);">Design user flows, wireframes, and visual systems for our platforms.</p>
+        <div class="role-meta">
+          <span><i class="fa-solid fa-clock"></i> 2 Months</span>
+          <span><i class="fa-solid fa-wifi"></i> Remote</span>
+        </div>
+        <div class="role-tags">
+          <span class="role-tag">Figma</span>
+          <span class="role-tag">Adobe XD</span>
+          <span class="role-tag">UX Research</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Multi-Step Application Form -->
     <div class="form-container">
-      <div class="form-title">
-        <i class="fa-solid fa-briefcase" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
-        <h2>Apply for an Internship</h2>
-        <p style="color: var(--text-secondary); margin-top: 0.5rem;">Join our fast-paced remote internship program to gain experience while driving social change.</p>
+
+      <!-- Step Progress Bar -->
+      <div class="step-progress">
+        <div class="step-item active" id="step-indicator-1">
+          <div class="step-circle">1</div>
+          <span class="step-label">Personal Info</span>
+        </div>
+        <div class="step-connector" id="connector-1"></div>
+        <div class="step-item" id="step-indicator-2">
+          <div class="step-circle">2</div>
+          <span class="step-label">Role & College</span>
+        </div>
+        <div class="step-connector" id="connector-2"></div>
+        <div class="step-item" id="step-indicator-3">
+          <div class="step-circle">3</div>
+          <span class="step-label">Review & Submit</span>
+        </div>
       </div>
 
       <form id="internship-form" novalidate>
-        
-        <!-- Name -->
-        <div class="form-group">
-          <label for="int-name"><i class="fa-solid fa-user" style="margin-right: 0.5rem; color: var(--primary);"></i> Full Name</label>
-          <input type="text" id="int-name" class="form-control" placeholder="Enter your full name" required minlength="3">
+
+        <!-- Step 1: Personal Info -->
+        <div class="form-step active" id="form-step-1">
+          <div class="form-title" style="margin-bottom:1.5rem;">
+            <h3 style="font-size:1.2rem;font-weight:700;">Personal Information</h3>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">Tell us about yourself</p>
+          </div>
+          <div class="form-group">
+            <label for="int-name"><i class="fa-solid fa-user" style="margin-right:0.5rem;color:var(--primary);"></i>Full Name</label>
+            <input type="text" id="int-name" class="form-control" placeholder="Enter your full name" required minlength="3">
+          </div>
+          <div class="form-group">
+            <label for="int-email"><i class="fa-solid fa-envelope" style="margin-right:0.5rem;color:var(--primary);"></i>Email Address</label>
+            <input type="email" id="int-email" class="form-control" placeholder="Enter your email address" required>
+          </div>
         </div>
 
-        <!-- Email -->
-        <div class="form-group">
-          <label for="int-email"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem; color: var(--primary);"></i> Email Address</label>
-          <input type="email" id="int-email" class="form-control" placeholder="Enter your email address" required>
+        <!-- Step 2: Role & College -->
+        <div class="form-step" id="form-step-2">
+          <div class="form-title" style="margin-bottom:1.5rem;">
+            <h3 style="font-size:1.2rem;font-weight:700;">Role & Institution</h3>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">Your academic and application details</p>
+          </div>
+          <div class="form-group">
+            <label for="int-phone"><i class="fa-solid fa-phone" style="margin-right:0.5rem;color:var(--primary);"></i>Phone Number</label>
+            <input type="tel" id="int-phone" class="form-control" placeholder="Enter 10-digit phone number" required pattern="[0-9]{10}">
+          </div>
+          <div class="form-group">
+            <label for="int-college"><i class="fa-solid fa-building-columns" style="margin-right:0.5rem;color:var(--primary);"></i>College / University</label>
+            <input type="text" id="int-college" class="form-control" placeholder="Enter college/university name" required>
+          </div>
+          <!-- Hidden role select (populated by role card clicks) -->
+          <div class="form-group">
+            <label for="int-role"><i class="fa-solid fa-laptop-code" style="margin-right:0.5rem;color:var(--primary);"></i>Selected Role</label>
+            <select id="int-role" class="form-control" required>
+              <option value="" disabled selected>Select the role above OR choose here</option>
+              <option value="Full Stack">Full Stack Developer</option>
+              <option value="Front End">Front End Developer</option>
+              <option value="Web Development">Web Development Intern</option>
+              <option value="Python">Python Developer</option>
+              <option value="Machine Learning">Machine Learning Intern</option>
+              <option value="UI UX">UI UX Designer</option>
+            </select>
+          </div>
         </div>
 
-        <!-- Phone -->
-        <div class="form-group">
-          <label for="int-phone"><i class="fa-solid fa-phone" style="margin-right: 0.5rem; color: var(--primary);"></i> Phone Number</label>
-          <input type="tel" id="int-phone" class="form-control" placeholder="Enter 10-digit phone number" required pattern="[0-9]{10}">
+        <!-- Step 3: Review & Submit -->
+        <div class="form-step" id="form-step-3">
+          <div class="form-title" style="margin-bottom:1.5rem;">
+            <h3 style="font-size:1.2rem;font-weight:700;">Review Your Application</h3>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">Confirm everything looks correct before submitting</p>
+          </div>
+          <div id="confirm-summary" style="background:var(--background);border-radius:12px;padding:1.5rem;border:1px solid var(--border-color);margin-bottom:1.5rem;">
+            <!-- Populated by JS -->
+          </div>
+          <div style="background:rgba(37,99,235,0.05);border-radius:12px;padding:1rem 1.5rem;border:1px solid rgba(37,99,235,0.15);font-size:0.85rem;color:var(--text-secondary);">
+            <i class="fa-solid fa-circle-info" style="color:var(--primary);margin-right:0.5rem;"></i>
+            By submitting, you agree to be contacted by NayePankh Foundation regarding your application.
+          </div>
         </div>
 
-        <!-- College -->
-        <div class="form-group">
-          <label for="int-college"><i class="fa-solid fa-building-columns" style="margin-right: 0.5rem; color: var(--primary);"></i> College / University</label>
-          <input type="text" id="int-college" class="form-control" placeholder="Enter college/university name" required>
+        <!-- Step Navigation Buttons -->
+        <div class="step-nav">
+          <button type="button" class="btn btn-secondary" id="step-prev" style="display:none;">
+            <i class="fa-solid fa-arrow-left"></i> Previous
+          </button>
+          <button type="button" class="btn btn-primary" id="step-next">
+            Next Step <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button type="submit" class="btn btn-primary" id="step-submit" style="display:none;">
+            <i class="fa-solid fa-paper-plane"></i> Submit Application
+          </button>
         </div>
-
-        <!-- Role Dropdown -->
-        <div class="form-group">
-          <label for="int-role"><i class="fa-solid fa-laptop-code" style="margin-right: 0.5rem; color: var(--primary);"></i> Select Role</label>
-          <select id="int-role" class="form-control" required>
-            <option value="" disabled selected>Select the role you're applying for</option>
-            <option value="Full Stack">Full Stack Developer</option>
-            <option value="Front End">Front End Developer</option>
-            <option value="Web Development">Web Development Intern</option>
-            <option value="Python">Python Developer</option>
-            <option value="Machine Learning">Machine Learning Intern</option>
-            <option value="UI UX">UI UX Designer</option>
-          </select>
-        </div>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
-          <i class="fa-solid fa-paper-plane"></i> Apply Now
-        </button>
 
       </form>
     </div>
+
   </main>
 
   <!-- Footer Section -->
@@ -126,6 +285,8 @@
         <ul class="footer-links">
           <li><a href="dashboard.html">Dashboard</a></li>
           <li><a href="recommendation.html">Recommendation System</a></li>
+          <li><a href="tracker.html">Track Application</a></li>
+          <li><a href="certificate.html">Certificate Generator</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>

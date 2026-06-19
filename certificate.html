@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Generator - NayePankh Foundation</title>
+  <meta name="description" content="Generate and download your NayePankh Foundation volunteer certificate as a PDF-ready image.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/darkmode.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-container">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
+        </a>
+      </div>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="volunteer.html" class="nav-link">Volunteer</a>
+        <a href="internship.html" class="nav-link">Internships</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="recommendation.html" class="nav-link">Recommendation</a>
+        <a href="tracker.html" class="nav-link">Track Application</a>
+        <a href="certificate.html" class="nav-link active">Certificate</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="btn-theme-toggle" id="theme-toggle">
+          <span id="theme-toggle-icon">🌙</span> <span id="theme-toggle-text">Dark Mode</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container fade-in">
+
+    <div class="certificate-page">
+
+      <!-- Controls -->
+      <div class="cert-controls">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;">
+          <div style="width:52px;height:52px;background:rgba(37,99,235,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--primary);">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div>
+            <h2>Certificate Generator</h2>
+            <p class="subtitle" style="margin-bottom:0;">Fill in your details and generate a downloadable certificate.</p>
+          </div>
+        </div>
+
+        <hr style="margin:1.5rem 0;border-color:var(--border-color);">
+
+        <div class="cert-form-row">
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="cert-name"><i class="fa-solid fa-user" style="margin-right:0.5rem;color:var(--primary);"></i>Your Full Name</label>
+            <input type="text" id="cert-name" class="form-control" placeholder="e.g. Priya Sharma" value="">
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="cert-domain"><i class="fa-solid fa-laptop-code" style="margin-right:0.5rem;color:var(--primary);"></i>Internship Domain</label>
+            <select id="cert-domain" class="form-control">
+              <option value="Web Development">Web Development</option>
+              <option value="Full Stack Development">Full Stack Development</option>
+              <option value="Python Development">Python Development</option>
+              <option value="Machine Learning">Machine Learning</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="Data Analytics">Data Analytics</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cert-form-row" style="margin-top:1.25rem;">
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="cert-duration"><i class="fa-solid fa-calendar-days" style="margin-right:0.5rem;color:var(--primary);"></i>Duration</label>
+            <select id="cert-duration" class="form-control">
+              <option value="1 Month">1 Month</option>
+              <option value="2 Months" selected>2 Months</option>
+              <option value="3 Months">3 Months</option>
+              <option value="4 Months">4 Months</option>
+              <option value="6 Months">6 Months</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="cert-grade"><i class="fa-solid fa-star" style="margin-right:0.5rem;color:var(--accent);"></i>Performance Grade</label>
+            <select id="cert-grade" class="form-control">
+              <option value="Outstanding">Outstanding</option>
+              <option value="Excellent" selected>Excellent</option>
+              <option value="Very Good">Very Good</option>
+              <option value="Good">Good</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:1.75rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <button id="generate-cert-btn" class="btn btn-primary">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Certificate
+          </button>
+          <button id="download-cert-btn" class="btn btn-secondary" style="display:none;">
+            <i class="fa-solid fa-download"></i> Download PNG
+          </button>
+        </div>
+      </div>
+
+      <!-- Canvas Preview -->
+      <div class="cert-canvas-wrapper">
+        <h3><i class="fa-solid fa-eye" style="margin-right:0.5rem;"></i>Certificate Preview</h3>
+        <canvas id="certificateCanvas" width="900" height="630"></canvas>
+        <p style="font-size:0.82rem;color:var(--text-secondary);margin-top:1rem;">
+          <i class="fa-solid fa-circle-info" style="margin-right:0.4rem;"></i>
+          Click "Generate Certificate" to preview. Click "Download PNG" to save.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom:1.5rem;display:inline-flex;">
+          <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
+        </a>
+        <p>NayePankh Foundation — uplifting communities through education, empowerment, and opportunity.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="internship.html">Internships</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More Links</h4>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="tracker.html">Track Application</a></li>
+          <li><a href="certificate.html">Certificate</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p style="margin-bottom:0.5rem;"><i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:0.5rem;"></i> Sector 62, Noida, UP, India</p>
+        <p style="margin-bottom:0.5rem;"><i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:0.5rem;"></i> info@nayepankh.org</p>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NayePankh Foundation. All rights reserved.</p>
+      <p>Made with <i class="fa-solid fa-heart" style="color:red;"></i> for a better society</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/certificate.js"></script>
+</body>
+</html>

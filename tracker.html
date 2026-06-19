@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track My Application - NayePankh Foundation</title>
+  <meta name="description" content="Track the status of your internship or volunteer application at NayePankh Foundation.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/darkmode.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-container">
+    <div class="navbar">
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
+        </a>
+      </div>
+      <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="volunteer.html" class="nav-link">Volunteer</a>
+        <a href="internship.html" class="nav-link">Internships</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="recommendation.html" class="nav-link">Recommendation</a>
+        <a href="tracker.html" class="nav-link active">Track Application</a>
+        <a href="certificate.html" class="nav-link">Certificate</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="btn-theme-toggle" id="theme-toggle">
+          <span id="theme-toggle-icon">🌙</span> <span id="theme-toggle-text">Dark Mode</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container fade-in">
+
+    <div class="tracker-container">
+
+      <!-- Search Card -->
+      <div class="tracker-search-card">
+        <i class="fa-solid fa-magnifying-glass-chart" style="font-size:3rem;color:var(--primary);margin-bottom:1rem;"></i>
+        <h2>Track Your Application</h2>
+        <p>Enter your registered email address to check your internship application status.</p>
+
+        <div class="tracker-input-row">
+          <input type="email" id="tracker-email" class="form-control" placeholder="Enter your email address" id="tracker-email-input">
+          <button id="tracker-search-btn" class="btn btn-primary">
+            <i class="fa-solid fa-search"></i> Track
+          </button>
+        </div>
+
+        <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:1rem;">
+          <i class="fa-solid fa-lightbulb" style="color:var(--accent);"></i>
+          Apply on the <a href="internship.html" style="color:var(--primary);font-weight:600;">Internships page</a> first, then return here to track.
+        </p>
+      </div>
+
+      <!-- Result Card -->
+      <div id="tracker-result" class="tracker-result">
+
+        <!-- Applicant Info Grid -->
+        <div class="tracker-applicant-info" id="tracker-info-grid">
+          <!-- Filled by JS -->
+        </div>
+
+        <!-- Status Stepper -->
+        <h4 style="font-size:1rem;font-weight:700;margin-bottom:1.5rem;">
+          <i class="fa-solid fa-timeline" style="color:var(--primary);margin-right:0.5rem;"></i>Application Journey
+        </h4>
+
+        <div class="status-stepper" id="status-stepper">
+          <!-- Built by JS -->
+        </div>
+
+        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border-color);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+          <p style="font-size:0.85rem;color:var(--text-secondary);">
+            <i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:0.4rem;"></i>
+            Updates will be sent to your registered email.
+          </p>
+          <a href="certificate.html" class="btn btn-secondary" style="font-size:0.85rem;padding:0.5rem 1rem;">
+            <i class="fa-solid fa-award"></i> Get Certificate
+          </a>
+        </div>
+
+      </div>
+
+      <!-- No Result Card -->
+      <div id="tracker-no-result" class="tracker-result" style="text-align:center;">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size:3rem;color:var(--accent);margin-bottom:1rem;display:block;"></i>
+        <h3 style="margin-bottom:0.5rem;">Application Not Found</h3>
+        <p style="color:var(--text-secondary);margin-bottom:1.5rem;">No application found for this email. Make sure you applied using the same email address.</p>
+        <a href="internship.html" class="btn btn-primary">
+          <i class="fa-solid fa-briefcase"></i> Apply Now
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom:1.5rem;display:inline-flex;">
+          <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
+        </a>
+        <p>NayePankh Foundation — uplifting communities through education, empowerment, and opportunity.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="internship.html">Internships</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>More Links</h4>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="tracker.html">Track Application</a></li>
+          <li><a href="certificate.html">Certificate</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p style="margin-bottom:0.5rem;"><i class="fa-solid fa-location-dot" style="color:var(--primary);margin-right:0.5rem;"></i> Sector 62, Noida, UP, India</p>
+        <p style="margin-bottom:0.5rem;"><i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:0.5rem;"></i> info@nayepankh.org</p>
+        <div class="social-links">
+          <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NayePankh Foundation. All rights reserved.</p>
+      <p>Made with <i class="fa-solid fa-heart" style="color:red;"></i> for a better society</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/tracker.js"></script>
+</body>
+</html>

@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>System Dashboard - NayePankh Foundation</title>
-  <!-- Google Fonts Poppins -->
+  <meta name="description" content="Real-time volunteer management dashboard with charts, statistics, and applicant data.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- FontAwesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- Darkmode detection script to prevent FOUC -->
   <script src="js/darkmode.js"></script>
 </head>
 <body>
@@ -23,13 +20,9 @@
           <i class="fa-solid fa-feather-pointed"></i> Naye<span>Pankh</span>
         </a>
       </div>
-      
       <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
-
       <nav class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
@@ -37,6 +30,8 @@
         <a href="internship.html" class="nav-link">Internships</a>
         <a href="dashboard.html" class="nav-link active">Dashboard</a>
         <a href="recommendation.html" class="nav-link">Recommendation</a>
+        <a href="tracker.html" class="nav-link">Track Application</a>
+        <a href="certificate.html" class="nav-link">Certificate</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <button class="btn-theme-toggle" id="theme-toggle">
           <span id="theme-toggle-icon">🌙</span> <span id="theme-toggle-text">Dark Mode</span>
@@ -54,28 +49,21 @@
 
     <!-- Stats Grid -->
     <div class="dashboard-grid">
-      <!-- Total Volunteers -->
       <div class="stats-card hover-scale">
         <i class="fa-solid fa-users" style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;"></i>
-        <h3 id="stat-total-volunteers">--</h3>
+        <h3 id="stat-total-volunteers" data-counter>--</h3>
         <p>Total Volunteers</p>
       </div>
-
-      <!-- Total Applications -->
       <div class="stats-card hover-scale">
         <i class="fa-solid fa-file-invoice" style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;"></i>
-        <h3 id="stat-total-applications">--</h3>
+        <h3 id="stat-total-applications" data-counter>--</h3>
         <p>Total Applications</p>
       </div>
-
-      <!-- Programs -->
       <div class="stats-card hover-scale">
         <i class="fa-solid fa-folder-open" style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;"></i>
         <h3 id="stat-total-programs">4</h3>
         <p>Programs</p>
       </div>
-
-      <!-- Events -->
       <div class="stats-card hover-scale">
         <i class="fa-solid fa-calendar-days" style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;"></i>
         <h3 id="stat-total-events">12</h3>
@@ -85,15 +73,14 @@
 
     <!-- Chart row -->
     <div class="chart-row slide-up">
-      <!-- Pie Chart Card -->
+      <!-- Pie Chart -->
       <div class="chart-card">
         <h4><i class="fa-solid fa-chart-pie" style="color: var(--primary); margin-right: 0.5rem;"></i> Volunteer Skills Distribution</h4>
         <div class="chart-wrapper">
           <canvas id="skillsPieChart"></canvas>
         </div>
       </div>
-
-      <!-- Bar Chart Card -->
+      <!-- Bar Chart -->
       <div class="chart-card">
         <h4><i class="fa-solid fa-chart-bar" style="color: var(--primary); margin-right: 0.5rem;"></i> Applications By Internship Role</h4>
         <div class="chart-wrapper">
@@ -101,6 +88,47 @@
         </div>
       </div>
     </div>
+
+    <!-- Line Chart — Monthly Applications Trend -->
+    <div class="chart-card slide-up" style="margin-top:2rem;height:320px;">
+      <h4><i class="fa-solid fa-chart-line" style="color:var(--primary);margin-right:0.5rem;"></i> Monthly Applications Trend (2026)</h4>
+      <div class="chart-wrapper">
+        <canvas id="trendLineChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Applicants Table -->
+    <div class="table-card slide-up">
+      <div class="table-card-header">
+        <h4>
+          <i class="fa-solid fa-table-list" style="color:var(--primary);"></i>
+          Recent Internship Applications
+        </h4>
+        <div class="table-search-row">
+          <input type="text" id="table-search" class="table-search-input" placeholder="Search by name, role…">
+          <button id="export-csv-btn" class="btn-export">
+            <i class="fa-solid fa-file-csv"></i> Export CSV
+          </button>
+        </div>
+      </div>
+      <div style="overflow:auto;">
+        <table class="data-table" id="applicants-table">
+          <thead>
+            <tr>
+              <th data-col="id">App ID <i class="fa-solid fa-sort"></i></th>
+              <th data-col="name">Name <i class="fa-solid fa-sort"></i></th>
+              <th data-col="role">Role <i class="fa-solid fa-sort"></i></th>
+              <th data-col="college">College</th>
+              <th data-col="date">Date <i class="fa-solid fa-sort"></i></th>
+            </tr>
+          </thead>
+          <tbody id="applicants-table-body">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
   </main>
 
   <!-- Footer Section -->
@@ -126,6 +154,8 @@
         <ul class="footer-links">
           <li><a href="dashboard.html">Dashboard</a></li>
           <li><a href="recommendation.html">Recommendation System</a></li>
+          <li><a href="tracker.html">Track Application</a></li>
+          <li><a href="certificate.html">Certificate</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
